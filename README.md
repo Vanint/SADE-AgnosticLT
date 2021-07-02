@@ -5,7 +5,7 @@ This repository is the official Pytorch implementation of Test-Agnostic Long-Tai
 * Based on a new test-time self-supervised learning strategy, our method aggregates the three expertise-diverse experts to handle arbitrary test class distributions during the test time.
 
 <p align="center">
-<img src="figure.jpg" weight=800>
+<img src="figure.png" weight=800>
 </p>
 
 ## Results 
