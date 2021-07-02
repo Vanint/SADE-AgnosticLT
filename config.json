@@ -1,11 +1,12 @@
 {
     "name": "ImageNet_LT_ResNeXt50_TSA",
     "n_gpu": 2,
+
     "arch": {
         "type": "ResNeXt50Model",
         "args": {
             "num_classes": 1000,
-            "reduce_dimension": 1,
+            "reduce_dimension": true,
             "use_norm": true,
             "returns_feat": true,
             "num_experts": 3
@@ -13,8 +14,8 @@
     },
     "data_loader": {
         "type": "ImageNetLTDataLoader",
-        "args": {
-            "data_dir": "../../imagenet",
+        "args":{
+            "data_dir": "./data/imagenet",
             "batch_size": 64,
             "shuffle": true,
             "num_workers": 12
@@ -22,38 +23,34 @@
     },
     "optimizer": {
         "type": "SGD",
-        "args": {
+        "args":{
             "lr": 0.025,
-            "weight_decay": 0.0002,
+            "weight_decay": 5e-4,
             "momentum": 0.9,
             "nesterov": true
         }
     },
     "add_extra_info": true,
     "loss": {
-        "type": "RIDELoss",
-        "args": {
-            "reweight": true,
-            "reweight_factor": 0.02,
-            "reweight_epoch": 80
+        "type": "DiverseExpertLoss",
+        "args":{
+             "tau": 2
         }
     },
     "metrics": [
         "accuracy"
     ],
     "lr_scheduler": {
-        "type": "CustomLR",
+        "type": "CosineAnnealingLR",
         "args": {
-            "step1": 60,
-            "step2": 80,
-            "gamma": 0.1,
-            "warmup_epoch": 5
+            "T_max": 100,
+            "eta_min": 0
         }
     },
     "trainer": {
-        "epochs": 100,
-        "save_dir": "saved/expert3/100k",
-        "save_period": 100,
+        "epochs": 180,
+        "save_dir": "saved/imagenet/tsa_e180_inv2_bs64_lr0.025",
+        "save_period": 180,
         "verbosity": 2,
         "monitor": "max val_accuracy",
         "tensorboard": false
