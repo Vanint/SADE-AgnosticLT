@@ -9,7 +9,8 @@ This repository is the official Pytorch implementation of Test-Agnostic Long-Tai
 
 ## Results 
 ### ImageNet-LT based on ResNeXt-50
-* Long-tailed recognition with uniform test class distribution*
+* Long-tailed recognition with uniform test class distribution
+
 |    Methods   |  MACs(G) | Many-shot | Medium-shot | Few-shot | All classes | Download |  
 | ------------ | -------- | --------- | ----------- | -------- | ----------- | -------- |
 |    Softmax   |   4.26   |   68.1    |    41.5     |   14.0   |    48.0     |          |
@@ -17,6 +18,7 @@ This repository is the official Pytorch implementation of Test-Agnostic Long-Tai
 |  TSA (ours)  |   6.08   |   66.5    |    57.0     |   43.5   |    58.8     | Download | 
 
 * Test-agnostic long-tailed recognition 
+
 |    Methods   |  MACs(G) | Forward-50 | Forward-10 |  Uniform  | Backward-10 | Backward-50 |      
 | ------------ | -------- | ---------- | ---------- | --------- | ----------- | ----------- |
 |    Softmax   |   4.26   |    66.1    |    60.3    |    48.0   |    34.9     |    27.6     |   
@@ -26,6 +28,7 @@ This repository is the official Pytorch implementation of Test-Agnostic Long-Tai
 
 ### CIFAR100-Imbalance ratio 100 based on ResNet-32
 * Long-tailed recognition with uniform test class distribution 
+
 |    Methods   |  MACs(G) | Many-shot | Medium-shot | Few-shot | All classes | Download |  
 | ------------ | -------- | --------- | ----------- | -------- | ----------- | -------- |
 |    Softmax   |   0.07   |   68.6    |    41.1     |    9.6   |    41.4     |          |
@@ -33,6 +36,7 @@ This repository is the official Pytorch implementation of Test-Agnostic Long-Tai
 |  TSA (ours)  |   0.11   |   65.4    |    49.3     |   29.3   |    49.8     | Download | 
 
 * Test-agnostic long-tailed recognition 
+
 |    Methods   |  MACs(G) | Forward-50 | Forward-10 |  Uniform  | Backward-10 | Backward-50 |      
 | ------------ | -------- | ---------- | ---------- | --------- | ----------- | ----------- |
 |    Softmax   |   0.07   |    62.3    |    56.2    |    41.4   |    25.8     |    17.5     |   
@@ -41,7 +45,8 @@ This repository is the official Pytorch implementation of Test-Agnostic Long-Tai
 
 
 ### Places-LT based on ResNet-152
-* Long-tailed recognition with uniform test class distribution 
+* Long-tailed recognition with uniform test class distribution
+ 
 |    Methods   |  MACs(G) | Many-shot | Medium-shot | Few-shot | All classes | Download |  
 | ------------ | -------- | --------- | ----------- | -------- | ----------- | -------- |
 |    Softmax   |  11.56   |   46.2    |    27.5     |   12.7   |    31.4     |          |
@@ -49,6 +54,7 @@ This repository is the official Pytorch implementation of Test-Agnostic Long-Tai
 |  TSA (ours)  |  13.18   |   43.1    |    41.8     |   33.2   |    40.6     | Download | 
 
 * Test-agnostic long-tailed recognition 
+
 |    Methods   |  MACs(G) | Forward-3 | Forward-2 |  Uniform  | Backward-2 | Backward-3 |      
 | ------------ | -------- | --------- | --------- | --------- | ---------- | ---------- |
 |    Softmax   |  11.56   |   45.6    |   40.2    |    31.4   |    23.4    |    19.4    |   
@@ -58,6 +64,7 @@ This repository is the official Pytorch implementation of Test-Agnostic Long-Tai
 
 ### iNaturalist 2018 based on ResNet-50
 * Long-tailed recognition with uniform test class distribution 
+
 |    Methods   |  MACs(G) | Many-shot | Medium-shot | Few-shot | All classes | Download |  
 | ------------ | -------- | --------- | ----------- | -------- | ----------- | -------- |
 |    Softmax   |   4.14   |   74.7    |    66.3     |   60.0   |    64.7     |          |
@@ -65,6 +72,7 @@ This repository is the official Pytorch implementation of Test-Agnostic Long-Tai
 |  TSA (ours)  |   5.80   |   74.5    |    72.5     |   73.0   |    72.9     | Download | 
 
 * Test-agnostic long-tailed recognition 
+
 |    Methods   |  MACs(G) | Forward-50 | Forward-10 |  Uniform  | Backward-10 | Backward-50 |      
 | ------------ | -------- | ---------- | ---------- | --------- | ----------- | ----------- |
 |    Softmax   |   4.14   |    65.4    |    65.5    |    64.7   |    64.0     |    63.4     |   
