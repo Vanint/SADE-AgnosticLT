@@ -4,8 +4,9 @@ This repository is the official Pytorch implementation of Test-Agnostic Long-Tai
 * Based on a new expertise-diverse expert learning strategy, our method learns three expertise-diverse experts, where each one is skilled in a specific class distribution.
 * Based on a new test-time self-supervised learning strategy, our method aggregates the three expertise-diverse experts to handle arbitrary test class distributions during the test time.
 
-<img src='./ours_idea.pdf' width=800>
-  
+<p align="center">
+<img src="figure.jpg" weight=800>
+</p>
 
 ## Results 
 ### ImageNet-LT based on ResNeXt-50
