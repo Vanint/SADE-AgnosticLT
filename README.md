@@ -115,7 +115,9 @@ data
 ```
 
 ### Txt files
-* We provide txt files for test-agnostic long-tailed recognition for ImageNet-LT, Places-LT and iNaturalist 2018. CIFAR-100 will be generated automatically with the code.
+* We provide txt files for test-agnostic long-tailed recognition for ImageNet-LT, Places-LT and iNaturalist 2018. 
+* Please download these [txt files]() and put them to the /data_txt file.
+* CIFAR-100 will be generated automatically with the code.
 ```
 data_txt
 ├── ImageNet_LT
