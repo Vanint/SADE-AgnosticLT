@@ -1,4 +1,4 @@
-# Test-Agnostic Long-Tailed Recognition by Test-Time Self-Supervised Expert Aggregation 
+# Test-Agnostic Long-Tailed Recognition
 
 This repository is the official Pytorch implementation of Test-Agnostic Long-Tailed Recognition by Test-Time Self-Supervised Expert Aggregation.
 * Based on a new expertise-diverse expert learning strategy, our method learns three expertise-diverse experts, where each one is skilled in a specific class distribution.
