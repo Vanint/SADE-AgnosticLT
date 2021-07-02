@@ -9,7 +9,7 @@ This repository is the official Pytorch implementation of Test-Agnostic Long-Tai
 
 ## Results 
 ### ImageNet-LT based on ResNeXt-50
-* Long-tailed recognition with uniform test class distribution
+Long-tailed recognition with uniform test class distribution
 
 |    Methods   |  MACs(G) | Many-shot | Medium-shot | Few-shot | All classes | Download |  
 | ------------ | -------- | --------- | ----------- | -------- | ----------- | -------- |
@@ -17,7 +17,7 @@ This repository is the official Pytorch implementation of Test-Agnostic Long-Tai
 |     RIDE     |   6.08   |   68.0    |    52.9     |   35.1   |    56.3     |          |
 |  TSA (ours)  |   6.08   |   66.5    |    57.0     |   43.5   |    58.8     | Download | 
 
-* Test-agnostic long-tailed recognition 
+Test-agnostic long-tailed recognition 
 
 |    Methods   |  MACs(G) | Forward-50 | Forward-10 |  Uniform  | Backward-10 | Backward-50 |      
 | ------------ | -------- | ---------- | ---------- | --------- | ----------- | ----------- |
@@ -27,7 +27,7 @@ This repository is the official Pytorch implementation of Test-Agnostic Long-Tai
 
 
 ### CIFAR100-Imbalance ratio 100 based on ResNet-32
-* Long-tailed recognition with uniform test class distribution 
+Long-tailed recognition with uniform test class distribution 
 
 |    Methods   |  MACs(G) | Many-shot | Medium-shot | Few-shot | All classes | Download |  
 | ------------ | -------- | --------- | ----------- | -------- | ----------- | -------- |
@@ -35,7 +35,7 @@ This repository is the official Pytorch implementation of Test-Agnostic Long-Tai
 |     RIDE     |   0.11   |   67.4    |    49.5     |   23.7   |    48.0     |          |
 |  TSA (ours)  |   0.11   |   65.4    |    49.3     |   29.3   |    49.8     | Download | 
 
-* Test-agnostic long-tailed recognition 
+Test-agnostic long-tailed recognition 
 
 |    Methods   |  MACs(G) | Forward-50 | Forward-10 |  Uniform  | Backward-10 | Backward-50 |      
 | ------------ | -------- | ---------- | ---------- | --------- | ----------- | ----------- |
@@ -45,7 +45,7 @@ This repository is the official Pytorch implementation of Test-Agnostic Long-Tai
 
 
 ### Places-LT based on ResNet-152
-* Long-tailed recognition with uniform test class distribution
+Long-tailed recognition with uniform test class distribution
  
 |    Methods   |  MACs(G) | Many-shot | Medium-shot | Few-shot | All classes | Download |  
 | ------------ | -------- | --------- | ----------- | -------- | ----------- | -------- |
@@ -53,7 +53,7 @@ This repository is the official Pytorch implementation of Test-Agnostic Long-Tai
 |     RIDE     |  13.18   |   43.1    |    41.0     |   33.0   |    40.3     |          |
 |  TSA (ours)  |  13.18   |   43.1    |    41.8     |   33.2   |    40.6     | Download | 
 
-* Test-agnostic long-tailed recognition 
+Test-agnostic long-tailed recognition 
 
 |    Methods   |  MACs(G) | Forward-3 | Forward-2 |  Uniform  | Backward-2 | Backward-3 |      
 | ------------ | -------- | --------- | --------- | --------- | ---------- | ---------- |
@@ -63,7 +63,7 @@ This repository is the official Pytorch implementation of Test-Agnostic Long-Tai
 
 
 ### iNaturalist 2018 based on ResNet-50
-* Long-tailed recognition with uniform test class distribution 
+Long-tailed recognition with uniform test class distribution 
 
 |    Methods   |  MACs(G) | Many-shot | Medium-shot | Few-shot | All classes | Download |  
 | ------------ | -------- | --------- | ----------- | -------- | ----------- | -------- |
@@ -71,7 +71,7 @@ This repository is the official Pytorch implementation of Test-Agnostic Long-Tai
 |     RIDE     |   5.80   |   71.5    |    70.0     |   71.6   |    71.8     |          |
 |  TSA (ours)  |   5.80   |   74.5    |    72.5     |   73.0   |    72.9     | Download | 
 
-* Test-agnostic long-tailed recognition 
+Test-agnostic long-tailed recognition 
 
 |    Methods   |  MACs(G) | Forward-50 | Forward-10 |  Uniform  | Backward-10 | Backward-50 |      
 | ------------ | -------- | ---------- | ---------- | --------- | ----------- | ----------- |
@@ -80,32 +80,22 @@ This repository is the official Pytorch implementation of Test-Agnostic Long-Tai
 |  TSA (ours)  |   5.80   |    72.3    |    72.5    |    72.9   |    73.5     |    73.3     |   
  
 
+
 ## Requirements
 * To install requirements: 
 ```
 pip install -r requirements.txt
 ```
 
-* More specifically:
-* torch>=1.7
-* torchvision>=0.8.0
-* numpy
-* matplotlib 
-* tqdm
-* pandas
-* tensorboard>=1.14
-* pyyaml 
-* sklearn 
-* h5py 
-
 ### Hardware requirements
 8 GPUs with >= 11G GPU RAM are recommended. Otherwise the model with more experts may not fit in, especially on datasets with more classes (the FC layers will be large). We do not support CPU training, but CPU inference could be supported by slight modification.
 
 ## Datasets
-### We use four bechmark datasets. Please download these datasets and put them to the /data file.
-* ImageNet-LT and Places-LT can be found at [this link](https://drive.google.com/drive/u/1/folders/1j7Nkfe6ZhzKFXePHdsseeeGI877Xu1yf).
+### Four bechmark datasets 
+* Please download these datasets and put them to the /data file.
+* ImageNet-LT and Places-LT can be found at [here](https://drive.google.com/drive/u/1/folders/1j7Nkfe6ZhzKFXePHdsseeeGI877Xu1yf).
+* iNaturalist data should be the 2018 version from [here](https://github.com/visipedia/inat_comp).
 * CIFAR-100 will be downloaded automatically with the dataloader.
-* iNaturalist data should be the 2018 version from [this](https://github.com/visipedia/inat_comp).
 
 ```
 data
@@ -124,7 +114,8 @@ data
     └── train_val2018
 ```
 
-### We provide txt files for test-agnostic long-tailed recognition for ImageNet-LT, Places-LT and iNaturalist 2018. CIFAR-100 will be generated automatically with the code.
+### Txt files
+* We provide txt files for test-agnostic long-tailed recognition for ImageNet-LT, Places-LT and iNaturalist 2018. CIFAR-100 will be generated automatically with the code.
 ```
 data_txt
 ├── ImageNet_LT
@@ -173,7 +164,7 @@ data_txt
 * Please download the checkpoint zip file. Unzip and move the checkpoint files to /model/pretrained_model_places/.
 
 
-## Training/Test script
+## Script
 
 ### ImageNet-LT
 #### Training
@@ -193,7 +184,7 @@ python test.py -r checkpoint_path
 python test_all_imagenet.py -r checkpoint_path
 ``` 
 
-#### Test-time Training
+#### Test-time training
 * To test-time train the expertise-diverse model for agnostic test class distributions, run:
 ``` 
 python test_train_imagenet.py -c configs/test_time_imagenet_lt_resnext50_tsa.json -r checkpoint_path
@@ -220,7 +211,7 @@ python test.py -r checkpoint_path
 python test_all_cifar.py -r checkpoint_path
 ``` 
 
-#### Test-time Training
+#### Test-time training
 * To test-time train the expertise-diverse model for agnostic test class distributions, run:
 ``` 
 python test_train_cifar.py -c configs/test_time_cifar100_ir100_tsa.json -r checkpoint_path
@@ -246,7 +237,7 @@ python test_places.py -r checkpoint_path
 python test_all_places.py -r checkpoint_path
 ``` 
 
-#### Test-time Training
+#### Test-time training
 * To test-time train the expertise-diverse model for agnostic test class distributions, run:
 ``` 
 python test_train_places.py -c configs/test_time_places_lt_resnet152_tsa.json -r checkpoint_path
@@ -270,7 +261,7 @@ python test.py -r checkpoint_path
 python test_all_inat.py -r checkpoint_path
 ``` 
 
-#### Test-time Training
+#### Test-time training
 * To test-time train the expertise-diverse model for agnostic test class distributions, run:
 ``` 
 python test_train_inat.py -c configs/test_time_iNaturalist_resnet50_tsa.json -r checkpoint_path
@@ -290,4 +281,4 @@ If you find our work inspiring or use our codebase in your research, please cite
 ## Acknowledgements
 This is a project based on this [pytorch template](https://github.com/victoresque/pytorch-template). 
 
-The mutli-expert framework are based on from [RIDE](https://github.com/frank-xwang/RIDE-LongTailRecognition). The data generation of agnostic test class distributions takes references from [LADE](https://github.com/hyperconnect/LADE).
+The mutli-expert framework are based on [RIDE](https://github.com/frank-xwang/RIDE-LongTailRecognition). The data generation of agnostic test class distributions takes references from [LADE](https://github.com/hyperconnect/LADE).
