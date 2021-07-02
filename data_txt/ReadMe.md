@@ -1,1 +1,1 @@
-Please download the txt files from [here]().
+For iNaturalist 2018, please unzip the iNaturalist_train.zip.
