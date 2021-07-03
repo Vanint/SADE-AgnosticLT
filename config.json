@@ -1,5 +1,5 @@
 {
-    "name": "ImageNet_LT_ResNeXt50_TSA",
+    "name": "ImageNet_LT_ResNeXt50_TSEA",
     "n_gpu": 2,
 
     "arch": {
@@ -49,7 +49,7 @@
     },
     "trainer": {
         "epochs": 180,
-        "save_dir": "saved/imagenet/tsa_e180_inv2_bs64_lr0.025",
+        "save_dir": "saved/imagenet/tsea_e180_inv2_bs64_lr0.025",
         "save_period": 180,
         "verbosity": 2,
         "monitor": "max val_accuracy",
