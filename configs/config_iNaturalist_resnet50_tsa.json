@@ -18,7 +18,7 @@
             "data_dir": "./data/iNaturalist",
             "batch_size": 512,
             "shuffle": true,
-            "num_workers": 8
+            "num_workers": 16
         }
     },
     "optimizer": {
