@@ -30,11 +30,11 @@ Test-agnostic long-tailed recognition:
 ### CIFAR100-Imbalance ratio 100 (ResNet-32)
 Long-tailed recognition with uniform test class distribution： 
 
-|    Methods   |  MACs(G) | Top-1 acc. | Download |  
-| ------------ | -------- | ---------- | -------- |
-|    Softmax   |   0.07   |    41.4    |          |
-|     RIDE     |   0.11   |    48.0    |          |
-|  TSA (ours)  |   0.11   |    49.8    | Download | 
+|    Methods   |  MACs(G) | Top-1 acc. |
+| ------------ | -------- | ---------- |
+|    Softmax   |   0.07   |    41.4    |
+|     RIDE     |   0.11   |    48.0    |
+|  TSA (ours)  |   0.11   |    49.8    |
 
 Test-agnostic long-tailed recognition： 
 
@@ -48,11 +48,11 @@ Test-agnostic long-tailed recognition：
 ### Places-LT (ResNet-152)
 Long-tailed recognition with uniform test class distribution:
  
-|    Methods   |  MACs(G) | Top-1 acc. | Download |  
-| ------------ | -------- | ---------- | -------- |
-|    Softmax   |  11.56   |    31.4    |          |
-|     RIDE     |  13.18   |    40.3    |          |
-|  TSA (ours)  |  13.18   |    40.9    | Download | 
+|    Methods   |  MACs(G) | Top-1 acc. |
+| ------------ | -------- | ---------- |
+|    Softmax   |  11.56   |    31.4    |
+|     RIDE     |  13.18   |    40.3    |
+|  TSA (ours)  |  13.18   |    40.9    |
 
 Test-agnostic long-tailed recognition:
 
@@ -66,11 +66,11 @@ Test-agnostic long-tailed recognition:
 ### iNaturalist 2018 (ResNet-50)
 Long-tailed recognition with uniform test class distribution: 
 
-|    Methods   |  MACs(G) | Top-1 acc. | Download |  
-| ------------ | -------- | ---------- | -------- |
-|    Softmax   |   4.14   |    64.7    |          |
-|     RIDE     |   5.80   |    71.8    |          |
-|  TSA (ours)  |   5.80   |    72.9    | Download | 
+|    Methods   |  MACs(G) | Top-1 acc. |
+| ------------ | -------- | ---------- |
+|    Softmax   |   4.14   |    64.7    |
+|     RIDE     |   5.80   |    71.8    |
+|  TSA (ours)  |   5.80   |    72.9    |
 
 Test-agnostic long-tailed recognition: 
 
