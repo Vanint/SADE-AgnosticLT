@@ -12,11 +12,11 @@ This repository is the official Pytorch implementation of Test-Agnostic Long-Tai
 ### ImageNet-LT based on ResNeXt-50
 Long-tailed recognition with uniform test class distribution
 
-|    Methods   |  MACs(G) | Many-shot | Medium-shot | Few-shot | All classes | Download |  
-| ------------ | -------- | --------- | ----------- | -------- | ----------- | -------- |
-|    Softmax   |   4.26   |   68.1    |    41.5     |   14.0   |    48.0     |          |
-|     RIDE     |   6.08   |   68.0    |    52.9     |   35.1   |    56.3     |          |
-|  TSA (ours)  |   6.08   |   66.5    |    57.0     |   43.5   |    58.8     | Download | 
+|    Methods   |  MACs(G) | Top-1 accuracy | Download |  
+| ------------ | -------- | -------------- | -------- |
+|    Softmax   |   4.26   |      48.0      |          |
+|     RIDE     |   6.08   |      56.3      |          |
+|  TSA (ours)  |   6.08   |      58.8      | Download | 
 
 Test-agnostic long-tailed recognition 
 
@@ -30,11 +30,11 @@ Test-agnostic long-tailed recognition
 ### CIFAR100-Imbalance ratio 100 based on ResNet-32
 Long-tailed recognition with uniform test class distribution 
 
-|    Methods   |  MACs(G) | Many-shot | Medium-shot | Few-shot | All classes | Download |  
-| ------------ | -------- | --------- | ----------- | -------- | ----------- | -------- |
-|    Softmax   |   0.07   |   68.6    |    41.1     |    9.6   |    41.4     |          |
-|     RIDE     |   0.11   |   67.4    |    49.5     |   23.7   |    48.0     |          |
-|  TSA (ours)  |   0.11   |   65.4    |    49.3     |   29.3   |    49.8     | Download | 
+|    Methods   |  MACs(G) | Top-1 accuracy | Download |  
+| ------------ | -------- | -------------- | -------- |
+|    Softmax   |   0.07   |      41.4      |          |
+|     RIDE     |   0.11   |      48.0      |          |
+|  TSA (ours)  |   0.11   |      49.8      | Download | 
 
 Test-agnostic long-tailed recognition 
 
@@ -48,11 +48,11 @@ Test-agnostic long-tailed recognition
 ### Places-LT based on ResNet-152
 Long-tailed recognition with uniform test class distribution
  
-|    Methods   |  MACs(G) | Many-shot | Medium-shot | Few-shot | All classes | Download |  
-| ------------ | -------- | --------- | ----------- | -------- | ----------- | -------- |
-|    Softmax   |  11.56   |   46.2    |    27.5     |   12.7   |    31.4     |          |
-|     RIDE     |  13.18   |   43.1    |    41.0     |   33.0   |    40.3     |          |
-|  TSA (ours)  |  13.18   |   43.1    |    41.8     |   33.2   |    40.6     | Download | 
+|    Methods   |  MACs(G) | Top-1 accuracy | Download |  
+| ------------ | -------- | -------------- | -------- |
+|    Softmax   |  11.56   |      31.4      |          |
+|     RIDE     |  13.18   |      40.3      |          |
+|  TSA (ours)  |  13.18   |      40.6      | Download | 
 
 Test-agnostic long-tailed recognition 
 
@@ -66,11 +66,11 @@ Test-agnostic long-tailed recognition
 ### iNaturalist 2018 based on ResNet-50
 Long-tailed recognition with uniform test class distribution 
 
-|    Methods   |  MACs(G) | Many-shot | Medium-shot | Few-shot | All classes | Download |  
-| ------------ | -------- | --------- | ----------- | -------- | ----------- | -------- |
-|    Softmax   |   4.14   |   74.7    |    66.3     |   60.0   |    64.7     |          |
-|     RIDE     |   5.80   |   71.5    |    70.0     |   71.6   |    71.8     |          |
-|  TSA (ours)  |   5.80   |   74.5    |    72.5     |   73.0   |    72.9     | Download | 
+|    Methods   |  MACs(G) | Top-1 accuracy | Download |  
+| ------------ | -------- | -------------- | -------- |
+|    Softmax   |   4.14   |      64.7      |          |
+|     RIDE     |   5.80   |      71.8      |          |
+|  TSA (ours)  |   5.80   |      72.9      | Download | 
 
 Test-agnostic long-tailed recognition 
 
