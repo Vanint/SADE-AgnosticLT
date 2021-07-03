@@ -70,7 +70,7 @@ def mic_acc_cal(preds, labels):
    
 
 def validation(data_loader, model, num_classes,device):
-    b = np.load("../data/shot_list.npy")
+    b = np.load("./data/imagenet_lt_shot_list.npy")
     many_shot = b[0]
     medium_shot = b[1] 
     few_shot = b[2]
@@ -97,7 +97,6 @@ def validation(data_loader, model, num_classes,device):
     print('All top-1 Acc:', np.round(eval_acc_mic_top1 * 100, decimals=2))
     acc_per_class = confusion_matrix.diag()/confusion_matrix.sum(1)
     acc = acc_per_class.cpu().numpy() 
-    #print('Acc with class mean:', acc_per_class.mean().item())  # This is the per-class mean, which is higher than top-1
     many_shot_acc = acc[many_shot].mean()
     medium_shot_acc = acc[medium_shot].mean()
     few_shot_acc = acc[few_shot].mean()
