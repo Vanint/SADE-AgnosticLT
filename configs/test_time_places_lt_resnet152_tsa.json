@@ -24,9 +24,9 @@
     "optimizer": {
         "type": "SGD",
         "args":{
-            "lr": 0.005,
+            "lr": 0.01,
             "share_lr": 0.001,
-            "weight_decay": 5e-4,
+            "weight_decay": 4e-4,
             "momentum": 0.9,
             "nesterov": true
         }
