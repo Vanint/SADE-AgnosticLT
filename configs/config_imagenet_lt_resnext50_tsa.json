@@ -43,7 +43,7 @@
     "lr_scheduler": {
         "type": "CosineAnnealingLR",
         "args": {
-            "T_max": 100,
+            "T_max": 180,
             "eta_min": 0
         }
     },
