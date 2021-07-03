@@ -362,7 +362,7 @@ def test_training(train_data_loader,model,  aggregation_weight, optimizer,   num
 def test_validation(data_loader, model, num_classes, aggregation_weight, device):
     model.eval()  
     aggregation_weight.requires_grad = False
-    b = np.load("./data/shot_list.npy")
+    b = np.load("./data/imagenet_lt_shot_list.npy")
     many_shot = b[0]
     medium_shot = b[1] 
     few_shot = b[2]
