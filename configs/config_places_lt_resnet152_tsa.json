@@ -17,16 +17,16 @@
         "type": "Places_LT",
         "args":{
             "data_dir": "./data/Place365",
-            "batch_size": 256,
+            "batch_size": 128,
             "num_workers": 8
         }
     },
     "optimizer": {
         "type": "SGD",
         "args":{
-            "lr": 0.05,
+            "lr": 0.01,
             "share_lr": 0.001,
-            "weight_decay": 5e-4,
+            "weight_decay": 4e-4,
             "momentum": 0.9,
             "nesterov": true
         }
@@ -52,7 +52,7 @@
     },
     "trainer": {
         "epochs": 30,
-        "save_dir": "saved/places/ours_e30_inv1_bs256_lr0.05",
+        "save_dir": "saved/places/ours_e30_inv1_bs128_lr0.01",
         "save_period": 30,
         "verbosity": 2,
         "monitor": "max val_accuracy",
