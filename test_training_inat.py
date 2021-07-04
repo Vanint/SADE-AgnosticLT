@@ -206,8 +206,7 @@ class iNaturalistDataLoader(DataLoader):
 
         self.n_samples = len(self.dataset)
 
-        num_classes = len(np.unique(dataset.targets))
-        assert num_classes == 8142
+        num_classes = 8142
 
         cls_num_list = [0] * num_classes
         for label in dataset.targets:
