@@ -176,7 +176,7 @@ class iNaturalistDataLoader(DataLoader):
         train_trsfm = transforms.Compose([
             transforms.RandomResizedCrop(224),
             transforms.RandomApply([
-                transforms.ColorJitter(0.4, 0.4, 0.4, 0.4)  
+                transforms.ColorJitter(0.4, 0.4, 0.4, 0.1)  
             ], p=0.8),
             transforms.RandomGrayscale(p=0.2),
             transforms.RandomApply([GaussianBlur([.1, 2.])], p=0.5),    
