@@ -284,7 +284,7 @@ def main(config):
     model = model.to(device) 
     weight_record_list=[]
     performance_record_list=[]
-    test_distribution_set = ["forward2", "forward1.5",  "uniform", "backward1.5", "backward2"] 
+    test_distribution_set = ["forward3", "forward2",  "uniform", "backward2", "backward3"] 
     for test_distribution in test_distribution_set: 
         eval_txt   = './data_txt/iNaturalist18/iNaturalist18_%s.txt'%(test_distribution) 
         print(test_distribution)
