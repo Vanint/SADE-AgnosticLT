@@ -74,16 +74,11 @@ def main(config):
 
     acc_per_class = confusion_matrix.diag()/confusion_matrix.sum(1)
     
-    acc = acc_per_class.cpu().numpy()
-    print('Acc for each class: \n', acc) 
-    print('Acc with class mean:', acc_per_class.mean().item())
- 
-
-    if get_class_acc:   
-        many_shot_acc = acc[many_shot].mean()
-        medium_shot_acc = acc[medium_shot].mean()
-        few_shot_acc = acc[few_shot].mean()
-        print("{}, {}, {}".format(np.round(many_shot_acc * 100, decimals=2), np.round(medium_shot_acc * 100, decimals=2), np.round(few_shot_acc * 100, decimals=2)))
+    acc = acc_per_class.cpu().numpy() 
+  
+    many_shot_acc = acc[many_shot].mean()
+    medium_shot_acc = acc[medium_shot].mean()
+    few_shot_acc = acc[few_shot].mean() 
 
     n_samples = len(data_loader.sampler)
     log = {}
