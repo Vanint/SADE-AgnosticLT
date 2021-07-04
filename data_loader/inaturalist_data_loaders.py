@@ -74,7 +74,7 @@ class iNaturalistDataLoader(DataLoader):
     """
     def __init__(self, data_dir, batch_size, shuffle=True, num_workers=1, training=True, balanced=False, retain_epoch_size=True, 
                  train_txt= './data_txt/iNaturalist18/iNaturalist18_train.txt', 
-                 eval_txt= './data_txt/iNaturalist18/iNaturalist18_train.txt'):
+                 eval_txt= './data_txt/iNaturalist18/iNaturalist18_val.txt'):
         train_trsfm = transforms.Compose([
             transforms.RandomResizedCrop(224),
             transforms.RandomHorizontalFlip(),
