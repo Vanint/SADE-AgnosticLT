@@ -354,8 +354,8 @@ def test_training(train_data_loader,  config, model,  aggregation_weight, optimi
         expert2_logits_output1 = output1['logits'][:,1,:]
         expert3_logits_output1 = output1['logits'][:,2,:]
         aggregation_softmax = torch.nn.functional.softmax(aggregation_weight) # softmax for normalization
-        aggregation_output0 = aggregation_softmax[0] * expert1_logits_output0 + aggregation_softmax[1] * expert2_logits_output0 + aggregation_softmax[2] * expert3_logits_output0
-        aggregation_output1 = aggregation_softmax[0] * expert1_logits_output1 + aggregation_softmax[1] * expert2_logits_output1 + aggregation_softmax[2] * expert3_logits_output1
+        aggregation_output0 = aggregation_softmax[0].cuda() * expert1_logits_output0 + aggregation_softmax[1].cuda() * expert2_logits_output0 + aggregation_softmax[2].cuda() * expert3_logits_output0
+        aggregation_output1 = aggregation_softmax[0].cuda() * expert1_logits_output1 + aggregation_softmax[1].cuda() * expert2_logits_output1 + aggregation_softmax[2].cuda() * expert3_logits_output1
         softmax_aggregation_output0 = F.softmax(aggregation_output0, dim=1) 
         softmax_aggregation_output1 = F.softmax(aggregation_output1, dim=1)
         
