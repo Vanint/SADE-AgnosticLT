@@ -12,7 +12,7 @@ This repository is the official Pytorch implementation of Test-Agnostic Long-Tai
 ### ImageNet-LT (ResNeXt-50)
 Long-tailed recognition with uniform test class distribution:
 
-|    Methods   |  MACs(G) | Top-1 acc. | Download |  
+|    Methods   |  MACs(G) | Top-1 acc. |   Model  |  
 | ------------ | -------- | ---------- | -------- |
 |    Softmax   |   4.26   |    48.0    |          |
 |     RIDE     |   6.08   |    56.3    |          |
