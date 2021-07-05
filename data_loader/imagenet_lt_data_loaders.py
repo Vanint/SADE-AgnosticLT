@@ -73,7 +73,9 @@ class ImageNetLTDataLoader(DataLoader):
     ImageNetLT Data Loader
     """
     def __init__(self, data_dir, batch_size, shuffle=True, num_workers=1, training=True, balanced=False, retain_epoch_size=True, 
-                 train_txt="/ImageNet_LT_train.txt", val_txt="/ImageNet_LT_val.txt", test_txt="/ImageNet_LT_test.txt"):
+                 train_txt="./data_txt/ImageNet_LT/ImageNet_LT_train.txt", 
+                 val_txt="./data_txt/ImageNet_LT/ImageNet_LT_val.txt", 
+                 test_txt="./data_txt/ImageNet_LT/ImageNet_LT_test.txt"):
         train_trsfm = transforms.Compose([
             transforms.RandomResizedCrop(224),
             transforms.RandomHorizontalFlip(),
@@ -89,10 +91,10 @@ class ImageNetLTDataLoader(DataLoader):
         ])
 
         if training:
-            dataset = LT_Dataset(data_dir, data_dir + train_txt, train_trsfm)
-            val_dataset = LT_Dataset(data_dir, data_dir + val_txt, test_trsfm)
+            dataset = LT_Dataset(data_dir,  train_txt, train_trsfm)
+            val_dataset = LT_Dataset(data_dir, val_txt, test_trsfm)
         else: # test
-            dataset = LT_Dataset(data_dir, data_dir + test_txt, test_trsfm)
+            dataset = LT_Dataset(data_dir, test_txt, test_trsfm)
             val_dataset = None
 
         self.dataset = dataset
