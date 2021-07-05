@@ -276,7 +276,8 @@ def main(config):
     for test_distribution in test_distribution_set:    
         test_txt  = './data_txt/ImageNet_LT/ImageNet_LT_%s.txt'%(test_distribution) 
         print(test_txt)
-        data_loader = ImageNetLTDataLoader("./data/imagenet",
+        data_loader = ImageNetLTDataLoader(
+            config['data_loader']['args']['data_dir'],
             batch_size=128,
             shuffle=False,
             training=False,
