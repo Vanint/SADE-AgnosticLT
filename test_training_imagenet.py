@@ -289,7 +289,7 @@ def main(config):
         valid_data_loader = data_loader.test_set()
         num_classes = config._config["arch"]["args"]["num_classes"]        
         aggregation_weight = torch.nn.Parameter(torch.FloatTensor(3), requires_grad=True)
-        aggregation_weight.data.fill_(1/3).to(device)  
+        aggregation_weight.data.fill_(1/3)  
         
         optimizer = config.init_obj('optimizer', torch.optim, [aggregation_weight])
         
