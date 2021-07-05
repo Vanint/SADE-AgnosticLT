@@ -171,7 +171,7 @@ class ImageNetLTDataLoader(DataLoader):
     ImageNetLT Data Loader
     """
     def __init__(self, data_dir, batch_size, shuffle=True, num_workers=1, training=True, balanced=False, retain_epoch_size=True, 
-                 train_txt='/ImageNet_LT_train.txt', val_txt='/ImageNet_LT_val.txt', test_txt='/ImageNet_LT_test.txt'):
+                 train_txt='./data_txt/ImageNet_LT_train.txt', val_txt='./data_txt/ImageNet_LT_val.txt', test_txt='./data_txt/ImageNet_LT_test.txt'):
         train_trsfm = transforms.Compose([
             transforms.RandomResizedCrop(224, scale=(0.2, 1.)),
             transforms.RandomApply([
@@ -191,12 +191,12 @@ class ImageNetLTDataLoader(DataLoader):
         ])
 
         if training:
-            dataset = LT_Dataset(data_dir, data_dir + train_txt, train_trsfm)
-            val_dataset = LT_Dataset(data_dir, data_dir + val_txt, test_trsfm)
+            dataset = LT_Dataset(data_dir, train_txt, train_trsfm)
+            val_dataset = LT_Dataset(data_dir, val_txt, test_trsfm)
         else: # test
-            dataset = LT_Dataset(data_dir, data_dir + test_txt, train_trsfm)
-            train_dataset = LT_Dataset(data_dir, data_dir + test_txt, TwoCropsTransform(train_trsfm))
-            val_dataset = LT_Dataset(data_dir, data_dir + test_txt, test_trsfm) 
+            dataset = LT_Dataset(data_dir, test_txt, train_trsfm)
+            train_dataset = LT_Dataset(data_dir, test_txt, TwoCropsTransform(train_trsfm))
+            val_dataset = LT_Dataset(data_dir, test_txt, test_trsfm) 
             
         self.dataset = dataset
         self.train_dataset = train_dataset
@@ -272,7 +272,7 @@ def main(config):
     performance_record_list=[]
     test_distribution_set = ["forward50",  "forward25", "forward10", "forward5", "forward2", "uniform",  "backward2", "backward5", "backward10", "backward25", "backward50"] 
     for test_distribution in test_distribution_set:    
-        test_txt  = '/ImageNet_LT_%s.txt'%(test_distribution) 
+        test_txt  = './data_txt/ImageNet_LT_%s.txt'%(test_distribution) 
         print(test_txt)
         data_loader = ImageNetLTDataLoader("./data/imagenet",
             batch_size=128,
