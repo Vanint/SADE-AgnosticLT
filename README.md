@@ -16,7 +16,7 @@ Long-tailed recognition with uniform test class distribution:
 | ------------ | -------- | ---------- | -------- |
 |    Softmax   |   4.26   |    48.0    |          |
 |     RIDE     |   6.08   |    56.3    |          |
-|  TSEA (ours) |   6.08   |    58.8    | Download | 
+|  TSEA (ours) |   6.08   |    58.8    | [Download](https://drive.google.com/file/d/1xr6RpXlYOt_SetIbonVAVenf5GyNrR1W/view?usp=sharing) | 
 
 Test-agnostic long-tailed recognition:
 
