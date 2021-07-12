@@ -1,0 +1,39 @@
+{
+    "name": "Imbalance_CIFAR100LT_IR10_TADE_test_time_training",
+    "n_gpu": 1,
+
+    "arch": {
+        "type": "ResNet32Model",
+        "args": {
+            "num_classes": 100,
+            "reduce_dimension": true,
+            "use_norm": true,
+            "returns_feat": true,
+            "num_experts": 3
+        }
+    },
+    "data_loader": {
+        "type": "ImbalanceCIFAR100DataLoader",
+        "args":{
+            "data_dir": "./data/CIFAR-100",
+            "batch_size": 128,
+            "shuffle": true,
+            "num_workers": 4,
+            "imb_factor": 0.1 
+        }
+    },
+    "optimizer": {
+        "type": "SGD",
+        "args":{
+            "lr": 0.1,
+            "weight_decay": 5e-4,
+            "momentum": 0.9,
+            "nesterov": true
+        }
+    },
+    "add_extra_info": true,
+    "metrics": [
+        "accuracy"
+    ],
+    "epochs": 5 
+}
