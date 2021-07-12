@@ -1,6 +1,6 @@
 # Test-Agnostic Long-Tailed Recognition 
 
-This repository is the official Pytorch implementation of Test-Agnostic Long-Tailed Recognition by Test-Time Self-Supervised Expert Aggregation (TSEA).
+This repository is the official Pytorch implementation of Test-Agnostic Long-Tailed Recognition by Test-Time Self-Supervised Aggregating Diverse Experts (TADE).
 * Based on a new expertise-diverse expert learning strategy, our method learns three expertise-diverse experts, where each one is skilled in a specific class distribution.
 * Based on a new test-time self-supervised learning strategy, our method aggregates the three expertise-diverse experts to handle arbitrary test class distributions during the test time.
 
@@ -16,7 +16,7 @@ Long-tailed recognition with uniform test class distribution:
 | ------------ | -------- | ---------- | -------- |
 |    Softmax   |   4.26   |    48.0    |          |
 |     RIDE     |   6.08   |    56.3    |          |
-|  TSEA (ours) |   6.08   |    58.8    | [Download](https://drive.google.com/file/d/1xr6RpXlYOt_SetIbonVAVenf5GyNrR1W/view?usp=sharing) | 
+|  TADE (ours) |   6.08   |    58.8    | [Download](https://drive.google.com/file/d/1xr6RpXlYOt_SetIbonVAVenf5GyNrR1W/view?usp=sharing) | 
 
 Test-agnostic long-tailed recognition:
 
@@ -24,7 +24,7 @@ Test-agnostic long-tailed recognition:
 | ------------ | -------- | ---------- | ---------- | --------- | ----------- | ----------- |
 |    Softmax   |   4.26   |    66.1    |    60.3    |    48.0   |    34.9     |    27.6     |   
 |     RIDE     |   6.08   |    67.6    |    64.0    |    56.3   |    48.7     |    44.0     |    
-|  TSEA (ours) |   6.08   |    69.4    |    65.4    |    58.8   |    54.5     |    53.1     |   
+|  TADE (ours) |   6.08   |    69.4    |    65.4    |    58.8   |    54.5     |    53.1     |   
 
 
 ### CIFAR100-Imbalance ratio 100 (ResNet-32)
@@ -34,7 +34,7 @@ Long-tailed recognition with uniform test class distribution：
 | ------------ | -------- | ---------- |
 |    Softmax   |   0.07   |    41.4    |
 |     RIDE     |   0.11   |    48.0    |
-|  TSEA (ours) |   0.11   |    49.8    |
+|  TADE (ours) |   0.11   |    49.8    |
 
 Test-agnostic long-tailed recognition： 
 
@@ -42,7 +42,7 @@ Test-agnostic long-tailed recognition：
 | ------------ | -------- | ---------- | ---------- | --------- | ----------- | ----------- |
 |    Softmax   |   0.07   |    62.3    |    56.2    |    41.4   |    25.8     |    17.5     |   
 |     RIDE     |   0.11   |    63.0    |    57.0    |    48.0   |    35.4     |    29.3     |    
-|  TSEA (ours) |   0.11   |    65.9    |    58.3    |    49.8   |    43.9     |    42.4     |    
+|  TADE (ours) |   0.11   |    65.9    |    58.3    |    49.8   |    43.9     |    42.4     |    
 
 
 ### Places-LT (ResNet-152)
@@ -52,7 +52,7 @@ Long-tailed recognition with uniform test class distribution:
 | ------------ | -------- | ---------- |
 |    Softmax   |  11.56   |    31.4    |
 |     RIDE     |  13.18   |    40.3    |
-|  TSEA (ours) |  13.18   |    40.9    |
+|  TADE (ours) |  13.18   |    40.9    |
 
 Test-agnostic long-tailed recognition:
 
@@ -60,7 +60,7 @@ Test-agnostic long-tailed recognition:
 | ------------ | -------- | ---------- | ---------- | --------- | ----------- | ----------- |
 |    Softmax   |  11.56   |    45.6    |    40.2    |    31.4   |     23.4    |    19.4     |   
 |     RIDE     |  13.18   |    43.1    |    41.6    |    40.3   |     38.2    |    36.9     |    
-|  TSEA (ours) |  13.18   |    46.4    |    43.3    |    40.9   |     41.4    |    41.6     |    
+|  TADE (ours) |  13.18   |    46.4    |    43.3    |    40.9   |     41.4    |    41.6     |    
 
 
 ### iNaturalist 2018 (ResNet-50)
@@ -70,7 +70,7 @@ Long-tailed recognition with uniform test class distribution:
 | ------------ | -------- | ---------- |
 |    Softmax   |   4.14   |    64.7    |
 |     RIDE     |   5.80   |    71.8    |
-|  TSEA (ours) |   5.80   |    72.9    |
+|  TADE (ours) |   5.80   |    72.9    |
 
 Test-agnostic long-tailed recognition: 
 
@@ -78,7 +78,7 @@ Test-agnostic long-tailed recognition:
 | ------------ | -------- | --------- | --------- | --------- | ---------- | ---------- |
 |    Softmax   |   4.14   |   65.4    |   65.5    |    64.7   |    64.0    |    63.4    |   
 |     RIDE     |   5.80   |   71.5    |   71.9    |    71.8   |    71.9    |    71.8    |    
-|  TSEA (ours) |   5.80   |   72.3    |   72.5    |    72.9   |    73.5    |    73.3    |   
+|  TADE (ours) |   5.80   |   72.3    |   72.5    |    72.9   |    73.5    |    73.3    |   
  
 
 
@@ -172,7 +172,7 @@ data_txt
 #### Training
 * To train the expertise-diverse model, run this command:
 ```
-python train.py -c configs/config_imagenet_lt_resnext50_tsea.json
+python train.py -c configs/config_imagenet_lt_resnext50_tade.json
 ```
 
 #### Evaluate
@@ -189,7 +189,7 @@ python test_all_imagenet.py -r checkpoint_path
 #### Test-time training
 * To test-time train the expertise-diverse model for agnostic test class distributions, run:
 ``` 
-python test_train_imagenet.py -c configs/test_time_imagenet_lt_resnext50_tsea.json -r checkpoint_path
+python test_train_imagenet.py -c configs/test_time_imagenet_lt_resnext50_tade.json -r checkpoint_path
 ``` 
 
 
@@ -198,7 +198,7 @@ python test_train_imagenet.py -c configs/test_time_imagenet_lt_resnext50_tsea.js
 #### Training
 * To train the expertise-diverse model, run this command:
 ```
-python train.py -c configs/config_cifar100_ir100_tsea.json
+python train.py -c configs/config_cifar100_ir100_tade.json
 ```
 * One can change the imbalance ratio from 100 to 10/50 by changing the config file.
 
@@ -216,7 +216,7 @@ python test_all_cifar.py -r checkpoint_path
 #### Test-time training
 * To test-time train the expertise-diverse model for agnostic test class distributions, run:
 ``` 
-python test_train_cifar.py -c configs/test_time_cifar100_ir100_tsea.json -r checkpoint_path
+python test_train_cifar.py -c configs/test_time_cifar100_ir100_tade.json -r checkpoint_path
 ``` 
 * One can change the imbalance ratio from 100 to 10/50 by changing the config file.
  
@@ -225,7 +225,7 @@ python test_train_cifar.py -c configs/test_time_cifar100_ir100_tsea.json -r chec
 #### Training
 * To train the expertise-diverse model, run this command:
 ```
-python train.py -c configs/config_places_lt_resnet152_tsea.json
+python train.py -c configs/config_places_lt_resnet152_tade.json
 ```
 
 #### Evaluate
@@ -242,14 +242,14 @@ python test_all_places.py -r checkpoint_path
 #### Test-time training
 * To test-time train the expertise-diverse model for agnostic test class distributions, run:
 ``` 
-python test_train_places.py -c configs/test_time_places_lt_resnet152_tsea.json -r checkpoint_path
+python test_train_places.py -c configs/test_time_places_lt_resnet152_tade.json -r checkpoint_path
 ``` 
 
 ### iNaturalist 2018
 #### Training
 * To train the expertise-diverse model, run this command:
 ```
-python train.py -c configs/config_iNaturalist_resnet50_tsea.json
+python train.py -c configs/config_iNaturalist_resnet50_tade.json
 ```
 
 #### Evaluate
@@ -266,14 +266,14 @@ python test_all_inat.py -r checkpoint_path
 #### Test-time training
 * To test-time train the expertise-diverse model for agnostic test class distributions, run:
 ``` 
-python test_train_inat.py -c configs/test_time_iNaturalist_resnet50_tsea.json -r checkpoint_path
+python test_train_inat.py -c configs/test_time_iNaturalist_resnet50_tade.json -r checkpoint_path
 ``` 
 
 ## Citation
 If you find our work inspiring or use our codebase in your research, please cite our work.
 ```
 @article{zhang2021test,
-  title={Test-Agnostic Long-Tailed Recognition by Test-Time Self-Supervised Expert Aggregation},
+  title={Test-Agnostic Long-Tailed Recognition by Test-Time Self-Supervised Aggregating Diverse Experts},
   author={Zhang, Yifan and Feng, Jiashi},
   journal={arXiv},
   year={2021}
