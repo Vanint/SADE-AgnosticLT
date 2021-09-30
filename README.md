@@ -8,8 +8,8 @@ This repository is the official Pytorch implementation of [Test-Agnostic Long-Ta
 <img src="figure.png" weight=800>
 </p>
 
-## Results 
-### ImageNet-LT (ResNeXt-50)
+## 1. Results 
+### (1) ImageNet-LT (ResNeXt-50)
 Long-tailed recognition with uniform test class distribution:
 
 |    Methods   |  MACs(G) | Top-1 acc. |   Model  |  
@@ -27,7 +27,7 @@ Test-agnostic long-tailed recognition:
 |  TADE (ours) |   6.08   |    69.4    |    65.4    |    58.8   |    54.5     |    53.1     |   
 
 
-### CIFAR100-Imbalance ratio 100 (ResNet-32)
+### (2) CIFAR100-Imbalance ratio 100 (ResNet-32)
 Long-tailed recognition with uniform test class distribution： 
 
 |    Methods   |  MACs(G) | Top-1 acc. |
@@ -45,7 +45,7 @@ Test-agnostic long-tailed recognition：
 |  TADE (ours) |   0.11   |    65.9    |    58.3    |    49.8   |    43.9     |    42.4     |    
 
 
-### Places-LT (ResNet-152)
+### (3) Places-LT (ResNet-152)
 Long-tailed recognition with uniform test class distribution:
  
 |    Methods   |  MACs(G) | Top-1 acc. |
@@ -63,7 +63,7 @@ Test-agnostic long-tailed recognition:
 |  TADE (ours) |  13.18   |    46.4    |    43.3    |    40.9   |     41.4    |    41.6     |    
 
 
-### iNaturalist 2018 (ResNet-50)
+### (4) iNaturalist 2018 (ResNet-50)
 Long-tailed recognition with uniform test class distribution: 
 
 |    Methods   |  MACs(G) | Top-1 acc. |
@@ -82,7 +82,7 @@ Test-agnostic long-tailed recognition:
  
 
 
-## Requirements
+## 2. Requirements
 * To install requirements: 
 ```
 pip install -r requirements.txt
@@ -91,8 +91,8 @@ pip install -r requirements.txt
 ### Hardware requirements
 8 GPUs with >= 11G GPU RAM are recommended. Otherwise the model with more experts may not fit in, especially on datasets with more classes (the FC layers will be large). We do not support CPU training, but CPU inference could be supported by slight modification.
 
-## Datasets
-### Four bechmark datasets 
+## 3. Datasets
+### (1) Four bechmark datasets 
 * Please download these datasets and put them to the /data file.
 * ImageNet-LT and Places-LT can be found at [here](https://drive.google.com/drive/u/1/folders/1j7Nkfe6ZhzKFXePHdsseeeGI877Xu1yf).
 * iNaturalist data should be the 2018 version from [here](https://github.com/visipedia/inat_comp).
@@ -115,7 +115,7 @@ data
     └── train_val2018
 ```
 
-### Txt files
+### (2) Txt files
 * We provide txt files for test-agnostic long-tailed recognition for ImageNet-LT, Places-LT and iNaturalist 2018. CIFAR-100 will be generated automatically with the code.
 * For iNaturalist 2018, please unzip the iNaturalist_train.zip.
 ```
@@ -161,14 +161,14 @@ data_txt
 ```
 
 
-## Pretrained models
+## 4. Pretrained models
 * For the training on Places-LT, we follow previous method and use [the pre-trained model](https://drive.google.com/drive/u/1/folders/1j7Nkfe6ZhzKFXePHdsseeeGI877Xu1yf).
 * Please download the checkpoint. Unzip and move the checkpoint files to /model/pretrained_model_places/.
 
 
-## Script
+## 5. Script
 
-### ImageNet-LT
+### (1) ImageNet-LT
 #### Training
 * To train the expertise-diverse model, run this command:
 ```
@@ -194,7 +194,7 @@ python test_train_imagenet.py -c configs/test_time_imagenet_lt_resnext50_tade.js
 
 
 
-### CIFAR100-LT 
+### (2) CIFAR100-LT 
 #### Training
 * To train the expertise-diverse model, run this command:
 ```
@@ -221,7 +221,7 @@ python test_train_cifar.py -c configs/test_time_cifar100_ir100_tade.json -r chec
 * One can change the imbalance ratio from 100 to 10/50 by changing the config file.
  
 
-### Places-LT
+### (3) Places-LT
 #### Training
 * To train the expertise-diverse model, run this command:
 ```
@@ -245,7 +245,7 @@ python test_all_places.py -r checkpoint_path
 python test_train_places.py -c configs/test_time_places_lt_resnet152_tade.json -r checkpoint_path
 ``` 
 
-### iNaturalist 2018
+### (4) iNaturalist 2018
 #### Training
 * To train the expertise-diverse model, run this command:
 ```
@@ -269,7 +269,7 @@ python test_all_inat.py -r checkpoint_path
 python test_train_inat.py -c configs/test_time_iNaturalist_resnet50_tade.json -r checkpoint_path
 ``` 
 
-## Citation
+## 6. Citation
 If you find our work inspiring or use our codebase in your research, please cite our work.
 ```
 @article{zhang2021test,
@@ -280,7 +280,7 @@ If you find our work inspiring or use our codebase in your research, please cite
 }
 ``` 
 
-## Acknowledgements
+## 7. Acknowledgements
 This is a project based on this [pytorch template](https://github.com/victoresque/pytorch-template). 
 
 The mutli-expert framework are based on [RIDE](https://github.com/frank-xwang/RIDE-LongTailRecognition). The data generation of agnostic test class distributions takes references from [LADE](https://github.com/hyperconnect/LADE).
