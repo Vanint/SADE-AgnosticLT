@@ -88,7 +88,7 @@ Test-agnostic long-tailed recognition:
 pip install -r requirements.txt
 ```
 
-### Hardware requirements
+* Hardware requirements
 8 GPUs with >= 11G GPU RAM are recommended. Otherwise the model with more experts may not fit in, especially on datasets with more classes (the FC layers will be large). We do not support CPU training, but CPU inference could be supported by slight modification.
 
 ## 3. Datasets
