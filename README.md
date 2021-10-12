@@ -13,7 +13,7 @@ This repository is the official Pytorch implementation of [Test-Agnostic Long-Ta
 Long-tailed recognition with uniform test class distribution:
 
 |    Methods   |  MACs(G) | Top-1 acc. |   Model  |  
-| ------------ | -------- | ---------- | -------- |
+| :------------: | :--------: | :----------: | :--------: |
 |    Softmax   |   4.26   |    48.0    |          |
 |     RIDE     |   6.08   |    56.3    |          |
 |  TADE (ours) |   6.08   |    58.8    | [Download](https://drive.google.com/file/d/1xr6RpXlYOt_SetIbonVAVenf5GyNrR1W/view?usp=sharing) | 
@@ -21,7 +21,7 @@ Long-tailed recognition with uniform test class distribution:
 Test-agnostic long-tailed recognition:
 
 |    Methods   |  MACs(G) | Forward-50 | Forward-10 |  Uniform  | Backward-10 | Backward-50 |      
-| ------------ | -------- | ---------- | ---------- | --------- | ----------- | ----------- |
+| :------------: | :--------: | :--------: | :--------: |  :--------: |  :--------: |  :--------: |
 |    Softmax   |   4.26   |    66.1    |    60.3    |    48.0   |    34.9     |    27.6     |   
 |     RIDE     |   6.08   |    67.6    |    64.0    |    56.3   |    48.7     |    44.0     |    
 |  TADE (ours) |   6.08   |    69.4    |    65.4    |    58.8   |    54.5     |    53.1     |   
@@ -31,7 +31,7 @@ Test-agnostic long-tailed recognition:
 Long-tailed recognition with uniform test class distribution： 
 
 |    Methods   |  MACs(G) | Top-1 acc. |
-| ------------ | -------- | ---------- |
+|  :--------: |  :--------: |  :--------: |
 |    Softmax   |   0.07   |    41.4    |
 |     RIDE     |   0.11   |    48.0    |
 |  TADE (ours) |   0.11   |    49.8    |
@@ -39,7 +39,7 @@ Long-tailed recognition with uniform test class distribution：
 Test-agnostic long-tailed recognition： 
 
 |    Methods   |  MACs(G) | Forward-50 | Forward-10 |  Uniform  | Backward-10 | Backward-50 |      
-| ------------ | -------- | ---------- | ---------- | --------- | ----------- | ----------- |
+|  :--------: |  :--------: | :--------: |  :--------: | :--------: | :--------: | :--------: |
 |    Softmax   |   0.07   |    62.3    |    56.2    |    41.4   |    25.8     |    17.5     |   
 |     RIDE     |   0.11   |    63.0    |    57.0    |    48.0   |    35.4     |    29.3     |    
 |  TADE (ours) |   0.11   |    65.9    |    58.3    |    49.8   |    43.9     |    42.4     |    
@@ -49,7 +49,7 @@ Test-agnostic long-tailed recognition：
 Long-tailed recognition with uniform test class distribution:
  
 |    Methods   |  MACs(G) | Top-1 acc. |
-| ------------ | -------- | ---------- |
+|  :--------: | :--------: | :--------: |
 |    Softmax   |  11.56   |    31.4    |
 |     RIDE     |  13.18   |    40.3    |
 |  TADE (ours) |  13.18   |    40.9    |
@@ -57,7 +57,7 @@ Long-tailed recognition with uniform test class distribution:
 Test-agnostic long-tailed recognition:
 
 |    Methods   |  MACs(G) | Forward-50 | Forward-10 |  Uniform  | Backward-10 | Backward-50 |      
-| ------------ | -------- | ---------- | ---------- | --------- | ----------- | ----------- |
+|  :--------: |  :--------: | :--------: |  :--------: | :--------: | :--------: | :--------: |
 |    Softmax   |  11.56   |    45.6    |    40.2    |    31.4   |     23.4    |    19.4     |   
 |     RIDE     |  13.18   |    43.1    |    41.6    |    40.3   |     38.2    |    36.9     |    
 |  TADE (ours) |  13.18   |    46.4    |    43.3    |    40.9   |     41.4    |    41.6     |    
@@ -67,7 +67,7 @@ Test-agnostic long-tailed recognition:
 Long-tailed recognition with uniform test class distribution: 
 
 |    Methods   |  MACs(G) | Top-1 acc. |
-| ------------ | -------- | ---------- |
+|  :--------: | :--------: | :--------: |
 |    Softmax   |   4.14   |    64.7    |
 |     RIDE     |   5.80   |    71.8    |
 |  TADE (ours) |   5.80   |    72.9    |
@@ -75,7 +75,7 @@ Long-tailed recognition with uniform test class distribution:
 Test-agnostic long-tailed recognition: 
 
 |    Methods   |  MACs(G) | Forward-3 | Forward-2 |  Uniform  | Backward-2 | Backward-3 |      
-| ------------ | -------- | --------- | --------- | --------- | ---------- | ---------- |
+|  :--------: |  :--------: | :--------: |  :--------: | :--------: | :--------: | :--------: |
 |    Softmax   |   4.14   |   65.4    |   65.5    |    64.7   |    64.0    |    63.4    |   
 |     RIDE     |   5.80   |   71.5    |   71.9    |    71.8   |    71.9    |    71.8    |    
 |  TADE (ours) |   5.80   |   72.3    |   72.5    |    72.9   |    73.5    |    73.3    |   
