@@ -272,10 +272,10 @@ python test_train_inat.py -c configs/test_time_iNaturalist_resnet50_tade.json -r
 ## 6. Citation
 If you find our work inspiring or use our codebase in your research, please cite our work.
 ```
-@article{zhang2021test,
+@inproceedings{zhang2021test,
   title={Test-Agnostic Long-Tailed Recognition by Test-Time Aggregating Diverse Experts with Self-Supervision},
   author={Zhang, Yifan and Hooi, Bryan and Hong, Lanqing and Feng, Jiashi},
-  journal={arXiv},
+  booktitle={NeurIPS workshop},
   year={2021}
 }
 ``` 
