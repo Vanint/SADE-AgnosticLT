@@ -35,7 +35,7 @@ class BalancedSampler(Sampler):
 
     def __len__(self):
         if self.retain_epoch_size:
-            return sum([len(bucket) for bucket in self.buckets]) # Acrually we need to upscale to next full batch
+            return sum([len(bucket) for bucket in self.buckets]) # Actually we need to upscale to next full batch
         else:
             return max([len(bucket) for bucket in self.buckets]) * self.bucket_num # Ensures every instance has the chance to be visited in an epoch
 
