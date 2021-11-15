@@ -275,7 +275,7 @@ If you find our work inspiring or use our codebase in your research, please cite
 @article{zhang2021test,
   title={Test-Agnostic Long-Tailed Recognition by Test-Time Aggregating Diverse Experts with Self-Supervision},
   author={Zhang, Yifan and Hooi, Bryan and Hong, Lanqing and Feng, Jiashi},
-  booktitle={arxiv},
+  journal={arXiv preprint arXiv:2107.09249},
   year={2021}
 }
 ``` 
