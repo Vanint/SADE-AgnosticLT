@@ -162,7 +162,7 @@ data_txt
 
 
 ## 4. Pretrained models
-* For the training on Places-LT, we follow previous method and use [the pre-trained model](https://drive.google.com/drive/u/1/folders/1j7Nkfe6ZhzKFXePHdsseeeGI877Xu1yf).
+* For the training on Places-LT, we follow previous methods and use [the pre-trained ResNet-152 model](https://github.com/zhmiao/OpenLongTailRecognition-OLTR).
 * Please download the checkpoint. Unzip and move the checkpoint files to /model/pretrained_model_places/.
 
 
