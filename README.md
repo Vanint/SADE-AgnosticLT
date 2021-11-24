@@ -1,5 +1,10 @@
 # Test-Agnostic Long-Tailed Recognition 
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/test-agnostic-long-tailed-recognition-by-test/long-tail-learning-on-imagenet-lt)](https://paperswithcode.com/sota/long-tail-learning-on-imagenet-lt?p=test-agnostic-long-tailed-recognition-by-test)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/test-agnostic-long-tailed-recognition-by-test/long-tail-learning-on-places-lt)](https://paperswithcode.com/sota/long-tail-learning-on-places-lt?p=test-agnostic-long-tailed-recognition-by-test)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/test-agnostic-long-tailed-recognition-by-test/long-tail-learning-on-inaturalist-2018)](https://paperswithcode.com/sota/long-tail-learning-on-inaturalist-2018?p=test-agnostic-long-tailed-recognition-by-test)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/test-agnostic-long-tailed-recognition-by-test/long-tail-learning-on-cifar-10-lt-r-100)](https://paperswithcode.com/sota/long-tail-learning-on-cifar-10-lt-r-100?p=test-agnostic-long-tailed-recognition-by-test)
+
 This repository is the official Pytorch implementation of [Test-Agnostic Long-Tailed Recognition by Test-Time Aggregating Diverse Experts with Self-Supervision](https://arxiv.org/pdf/2107.09249v1.pdf).
 * TADE (our method) innovates the expert training scheme by introducing diversity-promoting expertise-guided losses, which train different experts to handle distinct class distributions. In this way, the learned  experts would be  more diverse than  existing multi-expert methods, leading to  better ensemble performance, and aggregatedly simulate a wide spectrum of possible  class distributions. 
 * TADE develops a new self-supervised method, namely prediction stability maximization,   to adaptively aggregate these experts for better handling unknown test distribution, using unlabeled test class data.
