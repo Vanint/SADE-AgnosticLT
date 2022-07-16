@@ -198,7 +198,7 @@ class  TestAgnosticImbalanceCIFAR100DataLoader(DataLoader):
             val_dataset = test_dataset
         else: 
             dataset = IMBALANCECIFAR100(data_dir, train=True, download=True, transform=train_trsfm, imb_type=imb_type, imb_factor=test_imb_factor, reverse=reverse) 
-            train_dataset = IMBALANCECIFAR100(data_dir, train=True, download=True, transform= TwoCropsTransform(train_trsfm), imb_type=imb_type, imb_factor=test_imb_factor, reverse=reverse) 
+            train_dataset = IMBALANCECIFAR100(data_dir, train=False, download=True, transform= TwoCropsTransform(train_trsfm), imb_type=imb_type, imb_factor=test_imb_factor, reverse=reverse) 
             val_dataset = IMBALANCECIFAR100(data_dir, train=False, download=True, transform=test_trsfm, imb_type=imb_type, imb_factor=test_imb_factor, reverse=reverse) 
             
         self.dataset = dataset
