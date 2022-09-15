@@ -1,0 +1,61 @@
+{
+    "name": "Imbalance_Places_LT_SADE",
+    "n_gpu": 4,
+
+    "arch": {
+        "type": "ResNet152Model",
+        "args": {
+            "num_classes": 365,
+            "reduce_dimension": false,
+            "use_norm": true,
+            "returns_feat": true,
+            "share_layer3": false,
+            "num_experts": 3
+        }
+    },
+    "data_loader": {
+        "type": "Places_LT",
+        "args":{
+            "data_dir": "./data/Place365",
+            "batch_size": 128,
+            "num_workers": 8
+        }
+    },
+    "optimizer": {
+        "type": "SGD",
+        "args":{
+            "lr": 0.01,
+            "share_lr": 0.001,
+            "weight_decay": 4e-4,
+            "momentum": 0.9,
+            "nesterov": true
+        }
+    },
+    "add_extra_info": true,
+    "loss": {
+        "type": "DiverseExpertLoss",
+        "args": {
+            "tau": 1 
+        }
+    },
+    "metrics": [
+        "accuracy"
+    ],
+    "lr_scheduler": {
+        "type": "CustomLR",
+        "args": {
+            "step1": 10,
+            "step2": 20,
+            "gamma": 0.1,
+            "warmup_epoch":0 
+        }
+    },
+    "trainer": {
+        "epochs": 30,
+        "save_dir": "saved/places/sade_e30_inv1_bs128_lr0.01",
+        "save_period": 30,
+        "verbosity": 2,
+        "monitor": "max val_accuracy",
+        "tensorboard": false
+    }
+}

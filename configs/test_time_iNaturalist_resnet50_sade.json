@@ -1,0 +1,39 @@
+{
+    "name": "iNaturalist_ResNet50_SADE_test_time_training",
+    "n_gpu": 2,
+
+    "arch": {
+        "type": "ResNet50Model",
+        "args": {
+            "num_classes": 8142,
+            "reduce_dimension": true,
+            "use_norm": true,
+            "returns_feat": true,
+            "num_experts": 3
+        }
+    },
+    "data_loader": {
+        "type": "iNaturalistDataLoader",
+        "args":{
+            "data_dir": "./data/iNaturalist",
+            "batch_size": 128,
+            "shuffle": true,
+            "num_workers": 8
+        }
+    },
+    "optimizer": {
+        "type": "SGD",
+        "args":{
+            "lr": 0.2,
+            "weight_decay": 2e-4,
+            "momentum": 0.9,
+            "nesterov": true
+        }
+    },
+    "add_extra_info": true, 
+    "metrics": [
+        "accuracy"
+    ],
+    "epochs": 5 
+}
+             
