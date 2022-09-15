@@ -1,5 +1,5 @@
 {
-    "name": "ImageNet_LT_ResNeXt50_TADE",
+    "name": "ImageNet_LT_ResNeXt50_SADE",
     "n_gpu": 2,
 
     "arch": {
@@ -49,7 +49,7 @@
     },
     "trainer": {
         "epochs": 180,
-        "save_dir": "saved/imagenet/tade_e180_inv2_bs64_lr0.025",
+        "save_dir": "saved/imagenet/sade_e180_inv2_bs64_lr0.025",
         "save_period": 180,
         "verbosity": 2,
         "monitor": "max val_accuracy",
