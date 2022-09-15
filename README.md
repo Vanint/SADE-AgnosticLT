@@ -4,9 +4,9 @@
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/test-agnostic-long-tailed-recognition-by-test/long-tail-learning-on-inaturalist-2018)](https://paperswithcode.com/sota/long-tail-learning-on-inaturalist-2018?p=test-agnostic-long-tailed-recognition-by-test)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/test-agnostic-long-tailed-recognition-by-test/long-tail-learning-on-cifar-10-lt-r-100)](https://paperswithcode.com/sota/long-tail-learning-on-cifar-10-lt-r-100?p=test-agnostic-long-tailed-recognition-by-test)
 
-This repository is the official Pytorch implementation of [Test-Agnostic Long-Tailed Recognition by Test-Time Aggregating Diverse Experts with Self-Supervision](https://arxiv.org/pdf/2107.09249v2.pdf) (NeurIPS 2022).
-* TADE (our method) innovates the expert training scheme by introducing diversity-promoting expertise-guided losses, which train different experts to handle distinct class distributions. In this way, the learned  experts would be  more diverse than  existing multi-expert methods, leading to  better ensemble performance, and aggregatedly simulate a wide spectrum of possible  class distributions. 
-* TADE develops a new self-supervised method, namely prediction stability maximization,   to adaptively aggregate these experts for better handling unknown test distribution, using unlabeled test class data.
+This repository is the official Pytorch implementation of [Self-Supervised Aggregation of Diverse Experts for Test-Agnostic Long-Tailed Recognition](https://arxiv.org/pdf/2107.09249v2.pdf) (NeurIPS 2022).
+* SADE (our method) innovates the expert training scheme by introducing diversity-promoting expertise-guided losses, which train different experts to handle distinct class distributions. In this way, the learned  experts would be  more diverse than  existing multi-expert methods, leading to  better ensemble performance, and aggregatedly simulate a wide spectrum of possible  class distributions. 
+* SADE develops a new self-supervised method, namely prediction stability maximization,   to adaptively aggregate these experts for better handling unknown test distribution, using unlabeled test class data.
 
 <p align="center">
 <img src="figure.png" weight=800>
@@ -20,7 +20,7 @@ Long-tailed recognition with uniform test class distribution:
 | :------------: | :--------: | :----------: | :--------: |
 |    Softmax   |   4.26   |    48.0    |          |
 |     RIDE     |   6.08   |    56.3    |          |
-|  TADE (ours) |   6.08   |    58.8    | [Download](https://drive.google.com/file/d/1xr6RpXlYOt_SetIbonVAVenf5GyNrR1W/view?usp=sharing) | 
+|  SADE (ours) |   6.08   |    58.8    | [Download](https://drive.google.com/file/d/1xr6RpXlYOt_SetIbonVAVenf5GyNrR1W/view?usp=sharing) | 
 
 Test-agnostic long-tailed recognition:
 
@@ -28,7 +28,7 @@ Test-agnostic long-tailed recognition:
 | :------------: | :--------: | :--------: | :--------: |  :--------: |  :--------: |  :--------: |
 |    Softmax   |   4.26   |    66.1    |    60.3    |    48.0   |    34.9     |    27.6     |   
 |     RIDE     |   6.08   |    67.6    |    64.0    |    56.3   |    48.7     |    44.0     |    
-|  TADE (ours) |   6.08   |    69.4    |    65.4    |    58.8   |    54.5     |    53.1     |   
+|  SADE (ours) |   6.08   |    69.4    |    65.4    |    58.8   |    54.5     |    53.1     |   
 
 
 ### (2) CIFAR100-Imbalance ratio 100 (ResNet-32)
@@ -38,7 +38,7 @@ Long-tailed recognition with uniform test class distribution：
 |  :--------: |  :--------: |  :--------: |
 |    Softmax   |   0.07   |    41.4    |
 |     RIDE     |   0.11   |    48.0    |
-|  TADE (ours) |   0.11   |    49.8    |
+|  SADE (ours) |   0.11   |    49.8    |
 
 Test-agnostic long-tailed recognition： 
 
@@ -46,7 +46,7 @@ Test-agnostic long-tailed recognition：
 |  :--------: |  :--------: | :--------: |  :--------: | :--------: | :--------: | :--------: |
 |    Softmax   |   0.07   |    62.3    |    56.2    |    41.4   |    25.8     |    17.5     |   
 |     RIDE     |   0.11   |    63.0    |    57.0    |    48.0   |    35.4     |    29.3     |    
-|  TADE (ours) |   0.11   |    65.9    |    58.3    |    49.8   |    43.9     |    42.4     |    
+|  SADE (ours) |   0.11   |    65.9    |    58.3    |    49.8   |    43.9     |    42.4     |    
 
 
 ### (3) Places-LT (ResNet-152)
@@ -56,7 +56,7 @@ Long-tailed recognition with uniform test class distribution:
 |  :--------: | :--------: | :--------: |
 |    Softmax   |  11.56   |    31.4    |
 |     RIDE     |  13.18   |    40.3    |
-|  TADE (ours) |  13.18   |    40.9    |
+|  SADE (ours) |  13.18   |    40.9    |
 
 Test-agnostic long-tailed recognition:
 
@@ -64,7 +64,7 @@ Test-agnostic long-tailed recognition:
 |  :--------: |  :--------: | :--------: |  :--------: | :--------: | :--------: | :--------: |
 |    Softmax   |  11.56   |    45.6    |    40.2    |    31.4   |     23.4    |    19.4     |   
 |     RIDE     |  13.18   |    43.1    |    41.6    |    40.3   |     38.2    |    36.9     |    
-|  TADE (ours) |  13.18   |    46.4    |    43.3    |    40.9   |     41.4    |    41.6     |    
+|  SADE (ours) |  13.18   |    46.4    |    43.3    |    40.9   |     41.4    |    41.6     |    
 
 
 ### (4) iNaturalist 2018 (ResNet-50)
@@ -74,7 +74,7 @@ Long-tailed recognition with uniform test class distribution:
 |  :--------: | :--------: | :--------: |
 |    Softmax   |   4.14   |    64.7    |
 |     RIDE     |   5.80   |    71.8    |
-|  TADE (ours) |   5.80   |    72.9    |
+|  SADE (ours) |   5.80   |    72.9    |
 
 Test-agnostic long-tailed recognition: 
 
@@ -82,7 +82,7 @@ Test-agnostic long-tailed recognition:
 |  :--------: |  :--------: | :--------: |  :--------: | :--------: | :--------: | :--------: |
 |    Softmax   |   4.14   |   65.4    |   65.5    |    64.7   |    64.0    |    63.4    |   
 |     RIDE     |   5.80   |   71.5    |   71.9    |    71.8   |    71.9    |    71.8    |    
-|  TADE (ours) |   5.80   |   72.3    |   72.5    |    72.9   |    73.5    |    73.3    |   
+|  SADE (ours) |   5.80   |   72.3    |   72.5    |    72.9   |    73.5    |    73.3    |   
  
 
 
@@ -176,7 +176,7 @@ data_txt
 #### Training
 * To train the expertise-diverse model, run this command:
 ```
-python train.py -c configs/config_imagenet_lt_resnext50_tade.json
+python train.py -c configs/config_imagenet_lt_resnext50_sade.json
 ```
 
 #### Evaluate
@@ -193,7 +193,7 @@ python test_all_imagenet.py -r checkpoint_path
 #### Test-time training
 * To test-time train the expertise-diverse model for agnostic test class distributions, run:
 ``` 
-python test_train_imagenet.py -c configs/test_time_imagenet_lt_resnext50_tade.json -r checkpoint_path
+python test_train_imagenet.py -c configs/test_time_imagenet_lt_resnext50_sade.json -r checkpoint_path
 ``` 
 
 
@@ -202,7 +202,7 @@ python test_train_imagenet.py -c configs/test_time_imagenet_lt_resnext50_tade.js
 #### Training
 * To train the expertise-diverse model, run this command:
 ```
-python train.py -c configs/config_cifar100_ir100_tade.json
+python train.py -c configs/config_cifar100_ir100_sade.json
 ```
 * One can change the imbalance ratio from 100 to 10/50 by changing the config file.
 
@@ -220,7 +220,7 @@ python test_all_cifar.py -r checkpoint_path
 #### Test-time training
 * To test-time train the expertise-diverse model for agnostic test class distributions, run:
 ``` 
-python test_train_cifar.py -c configs/test_time_cifar100_ir100_tade.json -r checkpoint_path
+python test_train_cifar.py -c configs/test_time_cifar100_ir100_sade.json -r checkpoint_path
 ``` 
 * One can change the imbalance ratio from 100 to 10/50 by changing the config file.
  
@@ -229,7 +229,7 @@ python test_train_cifar.py -c configs/test_time_cifar100_ir100_tade.json -r chec
 #### Training
 * To train the expertise-diverse model, run this command:
 ```
-python train.py -c configs/config_places_lt_resnet152_tade.json
+python train.py -c configs/config_places_lt_resnet152_sade.json
 ```
 
 #### Evaluate
@@ -246,14 +246,14 @@ python test_all_places.py -r checkpoint_path
 #### Test-time training
 * To test-time train the expertise-diverse model for agnostic test class distributions, run:
 ``` 
-python test_train_places.py -c configs/test_time_places_lt_resnet152_tade.json -r checkpoint_path
+python test_train_places.py -c configs/test_time_places_lt_resnet152_sade.json -r checkpoint_path
 ``` 
 
 ### (4) iNaturalist 2018
 #### Training
 * To train the expertise-diverse model, run this command:
 ```
-python train.py -c configs/config_iNaturalist_resnet50_tade.json
+python train.py -c configs/config_iNaturalist_resnet50_sade.json
 ```
 
 #### Evaluate
@@ -270,7 +270,7 @@ python test_all_inat.py -r checkpoint_path
 #### Test-time training
 * To test-time train the expertise-diverse model for agnostic test class distributions, run:
 ``` 
-python test_train_inat.py -c configs/test_time_iNaturalist_resnet50_tade.json -r checkpoint_path
+python test_train_inat.py -c configs/test_time_iNaturalist_resnet50_sade.json -r checkpoint_path
 ``` 
 
 ## 6. Citation
