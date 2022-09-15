@@ -1,5 +1,5 @@
 {
-    "name": "Imbalance_CIFAR100LT_IR100_TSEA",
+    "name": "Imbalance_CIFAR100LT_IR100_SADE",
     "n_gpu": 1,
 
     "arch": {
@@ -52,7 +52,7 @@
     },
     "trainer": {
         "epochs": 200, 
-        "save_dir": "saved/cifar100/ir100/tade_e200_inv2_bs128_lr0.1",
+        "save_dir": "saved/cifar100/ir100/sade_e200_inv2_bs128_lr0.1",
         "save_period": 100,
         "verbosity": 2, 
         "monitor": "max val_accuracy",
