@@ -276,7 +276,7 @@ python test_train_inat.py -c configs/test_time_iNaturalist_resnet50_sade.json -r
 ## 6. Citation
 If you find our work inspiring or use our codebase in your research, please cite our work.
 ```
-@inproceedings{zhang2022test,
+@inproceedings{zhang2022Self,
   title={Self-Supervised Aggregation of Diverse Experts for Test-Agnostic Long-Tailed Recognition},
   author={Zhang, Yifan and Hooi, Bryan and Hong, Lanqing and Feng, Jiashi},
   booktitle={Advances in Neural Information Processing Systems},
